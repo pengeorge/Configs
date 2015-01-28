@@ -1,0 +1,24 @@
+altscreen on
+
+caption always "%{b}%H %{= wk}%-w%{= kw}%{+b} %n %t %{-b}%{wk}%+w %=%m/%d %0c %{-}" 
+
+# black background
+#caption always "%-w%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+w %=%m/%d %0c %{g}%H%{-}" 
+
+# blue background
+#caption always "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%H %m/%d"
+
+# window title
+hardstatus string "%h %-w%{= BW}%50>%n %t%{-}%+w%<"
+
+# Key Bindings
+# shift right and left arrows (not work)
+#bindkey ^[[1;2D prev
+#bindkey ^[[1;2C next
+
+# F12 and F11
+bindkey -k F1 prev
+bindkey -k F2 next
+
+# turn off vbell
+vbell off
