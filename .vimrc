@@ -12,6 +12,8 @@ set cul
 
 map <F10> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap <F8> :bp<CR>
+nnoremap <F9> :bn<CR>
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 
@@ -79,7 +81,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'Valloric/ListToggle'
 " Bundle 'scrooloose/nerdtree'
 ""Bundle 'vim-scripts/AutoClose'
-"Bundle 'bling/vim-airline'
+Bundle 'bling/vim-airline'
 Bundle 'kien/ctrlp.vim'
 " ...
 "
@@ -122,9 +124,13 @@ let NERDTreeWinPos='right'
 "let g:miniBufExplUseSingleClick=1
 
 " Powerline
-"let g:airline_symbols = 'fancy'
 set t_Co=256
-"let g:airline_theme='bubblegum'
-"let g:airline_powerline_fonts = 1
+"let g:solarized_termcolors=256
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+let g:airline_theme='murmur'
 color peachpuff 
 hi Comment ctermfg=blue
