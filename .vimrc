@@ -10,10 +10,10 @@ set laststatus=2
 set cursorline
 set cul
 
-map <F10> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+map <F6> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
-nnoremap <F8> :bp<CR>
-nnoremap <F9> :bn<CR>
+nnoremap <F9> :bp<CR>
+nnoremap <F10> :bn<CR>
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 
@@ -82,6 +82,7 @@ Bundle 'Valloric/ListToggle'
 " Bundle 'scrooloose/nerdtree'
 ""Bundle 'vim-scripts/AutoClose'
 Bundle 'bling/vim-airline'
+"Bundle 'bling/vim-bufferline'
 Bundle 'kien/ctrlp.vim'
 " ...
 "
@@ -125,12 +126,15 @@ let NERDTreeWinPos='right'
 
 " Powerline
 set t_Co=256
-"let g:solarized_termcolors=256
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#buffer_nr_show = 0
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline_left_sep=' '
+let g:airline_right_sep=' '
+let g:airline_powerline_fonts = 0
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
   endif
-let g:airline_theme='murmur'
+let g:airline_theme='badwolf' "murmur
 color peachpuff 
 hi Comment ctermfg=blue
