@@ -1,3 +1,9 @@
+"Lite Edition of .vimrc (pengeorge, Jan 2015)
+"Usage:
+"1. cp .vimrc.lite ~/.vimrc
+"2. git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+"3. vim, :BundleInstall 
+
 set nu
 set smartindent
 set expandtab
