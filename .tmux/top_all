@@ -1,0 +1,30 @@
+new-window
+rename-window 'x22|x27'
+select-pane -t 0
+split-window -h -p 50
+send-keys -t 0 'top' C-m
+send-keys -t 1 'ssh serverx27' C-m 'top' C-m
+new-window
+rename-window 'x24|x25'
+select-pane -t 0
+split-window -h -p 50
+send-keys -t 0 'ssh serverx24' C-m 'top' C-m
+send-keys -t 1 'ssh serverx25' C-m 'top' C-m
+new-window
+rename-window 'x28|x29'
+select-pane -t 0
+split-window -h -p 50
+send-keys -t 0 'ssh serverx28' C-m 'top' C-m
+send-keys -t 1 'ssh serverx29' C-m 'top' C-m
+new-window
+rename-window 'x32|x33'
+select-pane -t 0
+split-window -h -p 50
+send-keys -t 0 'ssh serverx32' C-m 'top' C-m
+send-keys -t 1 'ssh serverx33' C-m 'top' C-m
+new-window
+rename-window 'x34|x35'
+select-pane -t 0
+split-window -h -p 50
+send-keys -t 0 'ssh serverx34' C-m 'top' C-m
+send-keys -t 1 'ssh serverx35' C-m 'top' C-m
