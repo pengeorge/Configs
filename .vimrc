@@ -12,6 +12,8 @@ set cul
 
 map <F6> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
+imap <F9> <Esc>:bp!<CR>
+imap <F10> <Esc>:bn!<CR>
 nnoremap <F9> :bp!<CR>
 nnoremap <F10> :bn!<CR>
 let Tlist_Show_One_File=1
@@ -79,7 +81,7 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'Valloric/ListToggle'
-" Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 ""Bundle 'vim-scripts/AutoClose'
 Bundle 'bling/vim-airline'
 "Bundle 'bling/vim-bufferline'
@@ -116,7 +118,9 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 let g:syntastic_always_populate_loc_list = 1
 
 """""""""" NERDtree settings"""""""""""""""
-let NERDTreeWinPos='right'
+"autocmd vimenter * NERDTree "auto open NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+let NERDTreeWinPos='left'
 """""""""" mini buffer navigator"""""""""""
 "let g:miniBUfExplMapWindowNavVim=1
 "let g:miniBufExplMapWindowNavArrows=1
@@ -138,3 +142,4 @@ if !exists('g:airline_symbols')
 let g:airline_theme='badwolf' "murmur
 color peachpuff 
 hi Comment ctermfg=blue
+hi Directory guifg=#FF0000 ctermfg=blue
