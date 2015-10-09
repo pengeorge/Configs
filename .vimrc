@@ -60,7 +60,7 @@ Bundle 'gmarik/vundle'
 "
 " My bundles here:
 Bundle 'taglist.vim'
-Bundle 'c.vim'
+"Bundle 'c.vim'
 "Bundle 'minibufexpl.vim'
 Bundle 'grep.vim'
 Bundle 'mru.vim'
@@ -82,10 +82,14 @@ Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'Valloric/ListToggle'
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 ""Bundle 'vim-scripts/AutoClose'
 Bundle 'bling/vim-airline'
 "Bundle 'bling/vim-bufferline'
 Bundle 'kien/ctrlp.vim'
+
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'morhetz/gruvbox'
 " ...
 "
 filetype plugin indent on     " required!
@@ -118,8 +122,9 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 let g:syntastic_always_populate_loc_list = 1
 
 """""""""" NERDtree settings"""""""""""""""
-"autocmd vimenter * NERDTree "auto open NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+"let g:nerdtree_tabs_open_on_console_startup=1
+"autocmd vimenter * NERDTree | wincmd p "auto open NERDTree
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 let NERDTreeWinPos='left'
 """""""""" mini buffer navigator"""""""""""
 "let g:miniBUfExplMapWindowNavVim=1
@@ -140,6 +145,13 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
   endif
 let g:airline_theme='badwolf' "murmur
-color peachpuff 
-hi Comment ctermfg=blue
-hi Directory guifg=#FF0000 ctermfg=blue
+
+" Solarized color scheme
+"let g:solarized_termcolors=256
+"syntax enable
+set background=dark
+colorscheme gruvbox "solarized/peachpuff
+
+
+"hi Comment ctermfg=blue
+"hi Directory guifg=#FF0000 ctermfg=blue
