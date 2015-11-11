@@ -66,7 +66,7 @@ Bundle 'gmarik/vundle'
 "
 " My bundles here:
 "Bundle 'taglist.vim'
-Bundle 'c.vim'
+"Bundle 'c.vim'
 "Bundle 'minibufexpl.vim'
 Bundle 'grep.vim'
 Bundle 'mru.vim'
@@ -87,13 +87,16 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'scrooloose/syntastic'
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'Valloric/ListToggle'
-" Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 ""Bundle 'vim-scripts/AutoClose'
 Bundle 'bling/vim-airline'
 "Bundle 'bling/vim-bufferline'
 Bundle 'kien/ctrlp.vim'
-" ...
-"
+
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'morhetz/gruvbox'
+
 filetype plugin indent on     " required!
 
 
@@ -124,7 +127,7 @@ set statusline+=%*
 "let g:syntastic_always_populate_loc_list = 1
 
 """""""""" NERDtree settings"""""""""""""""
-let NERDTreeWinPos='right'
+let NERDTreeWinPos='left'
 """""""""" mini buffer navigator"""""""""""
 "let g:miniBUfExplMapWindowNavVim=1
 "let g:miniBufExplMapWindowNavArrows=1
@@ -144,5 +147,13 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
   endif
 let g:airline_theme='badwolf' "murmur
-color peachpuff 
-hi Comment ctermfg=blue
+
+" Solarized color scheme
+"let g:solarized_termcolors=256
+"syntax enable
+set background=dark
+colorscheme gruvbox "solarized/peachpuff
+
+
+"hi Comment ctermfg=blue
+"hi Directory guifg=#FF0000 ctermfg=blue
