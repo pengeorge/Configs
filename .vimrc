@@ -85,6 +85,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 ""Bundle 'vim-scripts/AutoClose'
 Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 "Bundle 'bling/vim-bufferline'
 Bundle 'kien/ctrlp.vim'
 
@@ -111,13 +112,15 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 """"""""""""YCM""""""""""""""""""""
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '/home/kaldi/code/kaldi-trunk/src/.ycm_extra_conf.py'
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_confirm_extra_conf = 0 "Do not ask when starting vim
 """"""""""YCM additional conf (Oct 4, 2014)"""""""""""""""
 let mapleader = ","
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+"DefinitionElseDeclaration<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 let g:syntastic_always_populate_loc_list = 1
 
