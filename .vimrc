@@ -98,6 +98,7 @@ Bundle 'morhetz/gruvbox'
 "
 filetype plugin indent on     " required!
 
+au FileType python setl shiftwidth=2 tabstop=2
 
 """"""""""syntastic""""""""""""
 let g:syntastic_check_on_open = 0
