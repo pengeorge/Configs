@@ -2,6 +2,7 @@ set nu
 set smartindent
 set expandtab
 set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 set autoread
 set encoding=utf-8
@@ -98,7 +99,7 @@ Bundle 'morhetz/gruvbox'
 "
 filetype plugin indent on     " required!
 
-au FileType python setl shiftwidth=2 tabstop=2
+au FileType python setl shiftwidth=2 tabstop=2 softtabstop=2
 
 """"""""""syntastic""""""""""""
 let g:syntastic_check_on_open = 0
