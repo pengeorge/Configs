@@ -17,6 +17,7 @@ imap <F9> <Esc>:bp!<CR>
 imap <F10> <Esc>:bn!<CR>
 nnoremap <F9> :bp!<CR>
 nnoremap <F10> :bn!<CR>
+nnoremap <space> za
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 
@@ -99,7 +100,9 @@ Bundle 'morhetz/gruvbox'
 "
 filetype plugin indent on     " required!
 
-au FileType python setl shiftwidth=2 tabstop=2 softtabstop=2
+au FileType python setl shiftwidth=2 tabstop=2 softtabstop=2 foldmethod=indent
+autocmd FileType cpp setlocal foldmethod=syntax
+set foldlevel=99
 
 """"""""""syntastic""""""""""""
 let g:syntastic_check_on_open = 0
