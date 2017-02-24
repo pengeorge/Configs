@@ -10,6 +10,7 @@ set laststatus=2
 
 set cursorline
 set cul
+set hidden " this keeps undo history when switching in buffers
 
 map <F6> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
